@@ -7,6 +7,9 @@
 
 const convertToString = (arr) => {
   // Insert missing solution please
+  return arr.map(el => {
+    return el.toString()
+  })
 };
 
 // Part 2 - Test

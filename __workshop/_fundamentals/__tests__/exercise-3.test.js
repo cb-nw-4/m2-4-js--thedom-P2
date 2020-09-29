@@ -10,6 +10,13 @@ test("Exercise 3", () => {
     { name: "Josie", isAvailable: false },
   ]);
   // add more tests here...
+  expect(
+    insert([{ name: "Bob" }, { name: "Josie" }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Bob", isAvailable: false },
+    { name: "Josie", isAvailable: false },
+  ]);
+
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
