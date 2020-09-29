@@ -11,10 +11,9 @@ test("Exercise 3", () => {
   ]);
   // add more tests here...
   expect(
-    insert([{ name: "Bob" }, { name: "Josie" }], { isAvailable: false })
+    insert([{ name: "Josie" }], {})
   ).toStrictEqual([
-    { name: "Bob", isAvailable: false },
-    { name: "Josie", isAvailable: false },
+    { name: "Josie"},
   ]);
 
 });
