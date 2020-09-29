@@ -6,8 +6,11 @@
 //
 
 const convertToString = (arr) => {
-  // Insert missing solution please
-};
+  if (typeof arr !== "object") {
+    return undefined;
+  }
+  return arr.map(element => element.toString());
+}
 
 // Part 2 - Test
 // --------------
