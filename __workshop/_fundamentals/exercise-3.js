@@ -15,7 +15,17 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+  if (typeof arr !== "object") {
+    return undefined;
+  }
+  else if (arr.every(element => typeof element !== "object")) {
+    return undefined;
+  }
+  else if (typeof obj !== "object") {
+    return obj;
+  }
+  let newArr = arr.map(element => {return {...element, ...obj}});
+  return newArr;
 };
 
 // Part 2 - Test
