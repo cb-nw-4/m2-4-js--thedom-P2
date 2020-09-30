@@ -15,7 +15,16 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+  // const spreadArr = [...arr]
+  const newArr = arr.map(el => {
+    return {...el, ...obj}
+  })
+
+  return newArr
+  
 };
+
+addValues([{name: 'chris', age: 23}, {name: 'liv', age: 36}, {name: 'dave', age: 43}], {isAvailable: true})
 
 // Part 2 - Test
 // --------------
