@@ -17,10 +17,14 @@
 const insert = (arr, obj) => {
   // Insert missing solution please
   let returnedTarget=[];
+  if (typeof obj!=="object"){
+    return arr;
+  }
+  else{
   for(let i=0; i<arr.length;i++){
   returnedTarget[i] = Object.assign(arr[i], obj);
   }
-  return returnedTarget;
+  return returnedTarget;}
 };
 
 // Part 2 - Test
