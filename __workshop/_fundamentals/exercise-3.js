@@ -15,7 +15,16 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+  if (typeof(obj) === 'object') {
+    
+    for (x = 0; x < arr.length; x++) {
+      arr[x] = {...arr[x], ...obj};
+    }
+
+    return arr;
+  } else {
+    return arr;
+  }
 };
 
 // Part 2 - Test
