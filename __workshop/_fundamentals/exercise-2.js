@@ -10,6 +10,13 @@
 
 const redacted = (arr) => {
   // Insert missing solution please
+  let newarr=arr;
+  for(let i=0; i<arr.length;i++){
+    if(typeof arr[i]==="string"){
+      newarr[i]="redacted";
+    }
+  }
+  return newarr;
 };
 
 // Part 2 - Test
