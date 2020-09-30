@@ -16,6 +16,18 @@ test("Exercise 3", () => {
     { name: "Josie"},
   ]);
 
+  expect(
+    insert([{ name: "Josie" }], {strong: true})
+  ).toStrictEqual([
+    { name: "Josie", strong: true},
+  ]);
+
+  expect(
+    insert([{ name: "Josie" }, { name: "Bob" }], {rich: true})
+  ).toStrictEqual([
+    { name: "Josie", rich: true}, { name: "Bob", rich: true}
+  ]);
+
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

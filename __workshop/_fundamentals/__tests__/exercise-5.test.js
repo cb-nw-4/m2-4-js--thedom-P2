@@ -6,6 +6,10 @@ test("Exercise 5", () => {
   expect(addNumbers(1, 2, 3, 4, 5)).toBe(55);
   // add more tests here...
   expect(addNumbers()).toBe('undefined')
+
+  expect(addNumbers(10, 'hey')).toBe(10);
+  // add more tests here...
+  expect(addNumbers('sup')).toBe(0)
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
