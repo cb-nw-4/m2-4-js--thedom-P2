@@ -17,7 +17,7 @@
 const insert = (arr, obj) => {
   if (typeof(obj) === 'object') {
     
-    for (x = 0; x < arr.length; x++) {
+    for (let x = 0; x < arr.length; x++) {
       arr[x] = {...arr[x], ...obj};
     }
 
