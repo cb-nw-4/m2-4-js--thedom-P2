@@ -12,6 +12,11 @@
 
 const count = (arr, key) => {
   // Insert missing solution please
+  return arr.reduce((previous, current)=>{
+    if(typeof key.value!=="string"){
+    return previous[key]+current[key];
+  }
+  });
 };
 
 // Part 2 - Test

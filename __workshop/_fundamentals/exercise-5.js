@@ -9,6 +9,10 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  return nums.reduce((previous, current) => {
+    return previous + current;
+  });
+
 };
 
 // Part 2 - Test
