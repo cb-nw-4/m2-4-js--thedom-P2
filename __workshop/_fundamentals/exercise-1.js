@@ -8,14 +8,14 @@
 const convertToString = (arr) => {
   // Insert missing solution please
   let ret = arr.map((element) => {
-    console.log(element);
+    // console.log(element);
     return element.toString();
   })
-  console.log('ret',ret)
+  // console.log('ret',ret)
   return ret;
 }
 
-// console.log(convertToString([4, 3, 2]));
+console.log(convertToString([4, 3, 2]));
 
 // Part 2 - Test
 // --------------

@@ -12,8 +12,23 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+  if (typeof(theString) === "string") {
+    return (
+      theString.toLowerCase() ===
+      // theString.toLowerCase().split("").reverse().join("")
+      theString
+        .toLowerCase()
+        .split("")
+        .reverse()
+        .join("")
+    );
+  } else {
+    return undefined;
+  }
 }
+
+console.log(isPalindrome(4));
+console.log(isPalindrome("radar"));
 
 // Part 2 - Test
 // --------------

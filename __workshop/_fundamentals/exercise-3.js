@@ -15,8 +15,23 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
-};
+  // let newArray = arr.map((user) => {
+  //   return user.push(obj);
+  // })
+  // console.log(newArray);
+  let newArray = [];
+  newArray = arr.map((user) => {
+    return user.push(obj);
+  })
+  return newArray;
+
+}
+
+console.log(insert([{ name: "Bob"}, { name: "Josie" }], {"isAvailable": false}));
+
+// let answer = insert([{ name: "Bob"}, { name: "Josie" }], {"isAvailable": false});
+// console.log(answer);
+
 
 // Part 2 - Test
 // --------------
