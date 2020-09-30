@@ -9,6 +9,14 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  if (nums.length === 0)
+    return undefined;
+
+  const total = nums.reduce( (a, b) => {   
+    return typeof b === "number" ? a + Math.pow(b, 2): a;
+  }, 0);
+
+  return total;
 };
 
 // Part 2 - Test
