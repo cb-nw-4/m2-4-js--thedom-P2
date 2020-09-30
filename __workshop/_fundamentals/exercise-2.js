@@ -10,7 +10,7 @@
 
 const redacted = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    if (typeof(arr[i] === "string")) {
+    if (typeof(arr[i]) === "string") {
       arr[i] = "redacted";
     }
     return arr;
