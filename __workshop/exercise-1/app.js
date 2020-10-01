@@ -46,25 +46,41 @@ racers.forEach((item, index) => {
 });
 console.log(racers);
 
-/*Exercise 1.6 to 1.8*/
-function racingFrog(racer) {
-    const randomDelay = Math.floor(Math.random() * 1000);
+/*Exercise 1.6 to 1.9*/
+let ranking = [];
+const results = () => {
+    ranking.forEach((item, index) => {
+        let i = index + 1;
+        console.log("The " + i + " place goes to: " + item.name);
+    });
+}
+function racingFrog(racer, func) {
+    const randomDelay = Math.floor(Math.random() * 800) + 200;  
     console.log("racingFrog() ", racer);
     const trackWidth = track.offsetWidth; 
     let frogPosition = document.querySelector(`#${racer.lane} .frog`);   
   
     const hop = setInterval(function () {        
-        const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);        
-        racer.progress += hopLength;       
+        const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);           
+        racer.progress = racer.progress + hopLength > 100 ? 100 : racer.progress + hopLength;       
         frogPosition.style.left = `${racer.progress}%`;
 
         if (racer.progress >= 100){
             console.log(racer.name + " has finished!");
-            clearInterval(hop);  
+            ranking.push(racer);           
+            if (racers.length === ranking.length){
+                func();
+            }  
+            clearInterval(hop);        
         }   
+        
       },  randomDelay); 
+     
   }
 
 racers.forEach(item => {
-    racingFrog(item);
-})
+    racingFrog(item, results);
+});
+
+
+
