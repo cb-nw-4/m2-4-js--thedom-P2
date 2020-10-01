@@ -27,7 +27,25 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  let dups = []; // for values found in both arrays
+  for (let x = 0; x < arr1.length; x++) {
+    for (y = 0; y < arr2.length; y++) {
+      if (arr1[x] === arr2[y]) { // is it a duplicate?
+        dups.push(arr1[x]); // add it to the dups list
+      }
+    }
+  }
+
+  combArr = [...arr1, ...arr2]; // combine both arrays
+  newArr = combArr.filter(num => { // filter out values in the dup list
+    if (dups.indexOf(num) === -1) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  return newArr;
 };
 
 // Part 2 - Test
