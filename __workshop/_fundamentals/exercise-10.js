@@ -28,6 +28,20 @@
 
 const uniqueElements = (arr1, arr2) => {
   // Your code here
+  let temparr=[];
+  //filter arr1
+    arr1.filter(function(word){
+    if(arr2.indexOf(word)===-1){
+      return temparr.push(word);
+    }
+  });
+  //filter arr2
+  arr2.filter(function(word){
+    if(arr1.indexOf(word)===-1){
+      return temparr.push(word);
+    }
+  });
+  return temparr;
 };
 
 // Part 2 - Test
