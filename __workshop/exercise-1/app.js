@@ -62,9 +62,7 @@ function racingFrog(racer) {
             console.log(racer.name + " has finished!");
             clearInterval(hop);  
         }   
-      },  randomDelay);   
-     
-       
+      },  randomDelay); 
   }
 
 racers.forEach(item => {
