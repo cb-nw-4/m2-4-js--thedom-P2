@@ -28,7 +28,21 @@
 
 const uniqueElements = (arr1, arr2) => {
   // Your code here
+  let newArr = [...arr1, ...arr2]
+  let sorted = newArr.sort()
+  // console.log(sorted)
+  let filtered = sorted.filter((el, i) => {
+    if (el === el[i + 1] || el[i - 1]){
+      return false
+    }
+    else {
+      return true
+    }
+  })
+  
 };
+
+// uniqueElements([0,1,2,3], [1,3,4,5])
 
 // Part 2 - Test
 // --------------
