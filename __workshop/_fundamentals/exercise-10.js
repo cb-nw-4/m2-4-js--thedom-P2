@@ -28,6 +28,19 @@
 
 const uniqueElements = (arr1, arr2) => {
   // Your code here
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return undefined;
+  }
+  
+  let uniqueArr1 = arr1.filter((el1 => {    
+     return !arr2.includes(el1);
+  }));
+
+  let uniqueArr2 = arr2.filter((el2 => {    
+    return !arr1.includes(el2);
+ }));
+
+ return [...uniqueArr1, ...uniqueArr2];
 };
 
 // Part 2 - Test
