@@ -18,21 +18,14 @@ for (let count = 1; count <= FROGS; count++) {
   track.appendChild(lane);
 }
 
-
 // Exercise 1.2 - Call in the frogs!
-// declare a variable called racers and assign a value of: empty array
 let racers = [];
-// write a for loop
 for (let count = 1; count <= FROGS; count++) {     
     const randomIndex = Math.floor(Math.random() * frogstable.length);
     racers.push(frogstable[randomIndex]);
     frogstable.splice(randomIndex,1);
 }
 console.log(racers);
-console.log(frogstable);
-// push a frog from frogstable into racers array
-
-// console.log racers
 
 // Exercise 1.3 to 1.5
 racers.forEach((item, index) => {
@@ -53,7 +46,9 @@ racers.forEach((item, index) => {
 });
 console.log(racers);
 
+/*Exercise 1.6 to 1.8*/
 function racingFrog(racer) {
+    const randomDelay = Math.floor(Math.random() * 1000);
     console.log("racingFrog() ", racer);
     const trackWidth = track.offsetWidth; 
     let frogPosition = document.querySelector(`#${racer.lane} .frog`);   
@@ -67,7 +62,7 @@ function racingFrog(racer) {
             console.log(racer.name + " has finished!");
             clearInterval(hop);  
         }   
-      }, 1000);   
+      },  randomDelay);   
      
        
   }
