@@ -8,10 +8,17 @@
 // e.g. redacted(["bacon", false, 42]) returns [ 'redacted', false, 42 ]
 //
 
-const redacted = (arr) => {
-  // Insert missing solution please
-};
-
+function redacted(arr){
+  const newArray = arr.map((element) => {
+    if (typeof element === 'string') {
+      return 'redacted';
+    } else {
+      return element;
+    }
+  })
+  return newArray;
+}
+console.log(redacted(["bacon", false, 42]));
 // Part 2 - Test
 // --------------
 // Test your function.
