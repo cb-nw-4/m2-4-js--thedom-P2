@@ -35,7 +35,10 @@ test("Exercise 7", () => {
     addValues([{ name: "chris", age: 23 }], { isAvailable: true })
   ).toStrictEqual([{ name: "chris", age: 23, isAvailable: true }]);
 
-    
+  expect(
+    addValues([{ name: "chris", age: 23 }], { isAvailable: true, strength: 'very' })
+  ).toStrictEqual([{ name: "chris", age: 23, isAvailable: true, strength: 'very' }]);
+
 
 });
 
