@@ -8,8 +8,30 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
-};
+  if (nums.length === 0) {
+    return undefined;
+  }
+  let sum = 0;
+  nums.forEach(item => {
+    if (typeof item === "number") {
+      sum = sum + Math.pow(item, 2);
+    }
+  })
+  return sum;
+}
+
+
+  // let sum = 0;
+  // let arrayedNums = nums.toString().split(",").map(Number);
+  // for (i = 0; i < arrayedNums.length; i++) {
+  //   if (typeof arrayedNums[i] === "number") {
+  //     sum = sum + Math.pow(arrayedNums[i], 2);
+  //   }
+  //   }
+  // return sum;
+  // }
+
+
 
 // Part 2 - Test
 // --------------
