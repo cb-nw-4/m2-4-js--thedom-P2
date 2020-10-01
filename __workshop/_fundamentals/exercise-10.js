@@ -27,8 +27,18 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
-};
+  if (typeof arr1 !== "object" || typeof arr2 !== "object") {
+    return undefined;
+  }
+  let unique1 = arr1.filter((o) => arr2.indexOf(o) === -1);
+  let unique2 = arr2.filter((o) => arr1.indexOf(o) === -1);
+
+  const unique = unique1.concat(unique2);
+  if (unique.length === 0) {
+    return [];
+  }
+  return unique;
+}
 
 // Part 2 - Test
 // --------------
