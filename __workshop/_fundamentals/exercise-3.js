@@ -19,9 +19,10 @@ const insert = (arr, obj) => {
   //   return user.push(obj);
   // })
   // console.log(newArray);
-  let newArray = [];
-  newArray = arr.map((user) => {
-    return user.push(obj);
+  let newArray = arr.map((user) => {
+    let value = {...user, ...obj};
+    // console.log(value, 'value');
+    return value;
   })
   return newArray;
 
