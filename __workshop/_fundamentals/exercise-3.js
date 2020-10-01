@@ -18,9 +18,10 @@ const insert = (arr, obj) => {
 
   if (typeof obj === "object" && Array.isArray(arr)){
     let peopleArray = arr.slice(0,arr.length);
+    let newKey = Object.keys(obj);
 
     peopleArray.forEach(person => {
-      person.isAvailable = obj.isAvailable;
+      person[newKey] = obj[newKey];
     });
     
    return peopleArray;

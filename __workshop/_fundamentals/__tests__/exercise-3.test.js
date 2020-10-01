@@ -23,12 +23,12 @@ test("Exercise 3", () => {
 
     //More names, change bool
     expect(
-      insert([{ name: "Bob" }, { name: "Josie" }, { name: "Max" }, { name: "Alex" }], { isAvailable: true })
+      insert([{ name: "Bob" }, { name: "Josie" }, { name: "Max" }, { name: "Alex" }], { class: "cw-4" })
     ).toStrictEqual([
-      { name: "Bob", isAvailable: true },
-      { name: "Josie", isAvailable: true },
-      { name: "Max", isAvailable: true },
-      { name: "Alex", isAvailable: true },
+      { name: "Bob", class: "cw-4" },
+      { name: "Josie", class: "cw-4" },
+      { name: "Max", class: "cw-4" },
+      { name: "Alex", class: "cw-4" },
     ]);
 
 });
