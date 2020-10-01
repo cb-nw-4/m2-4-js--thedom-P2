@@ -11,7 +11,11 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  
+  return arr.reduce((a,b) => {
+    return a + b[key];
+    }, 0);
+
 };
 
 // Part 2 - Test
