@@ -34,7 +34,7 @@ console.log(frogstable);
 
 // console.log racers
 
-// Exercise 1.3 and 1.4
+// Exercise 1.3 to 1.5
 racers.forEach((item, index) => {
   let lane = document.getElementById(`lane-${index + 1}`);
   let frog = document.createElement("span");
@@ -52,3 +52,24 @@ racers.forEach((item, index) => {
   racers[index] = {...item, ... obj};
 });
 console.log(racers);
+
+function racingFrog(racer) {
+    console.log("racingFrog() ", racer);
+    const trackWidth = track.offsetWidth;    
+    const hop = setInterval(function () {        
+        const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);        
+        racer.progress += hopLength;
+        console.log(racer.name + " is at " + racer.progress);
+
+        if (racer.progress >= 100){
+            console.log(racer.name + " has finished!");
+            clearInterval(hop);  
+        }   
+      }, 1000);   
+     
+       
+  }
+
+racers.forEach(item => {
+    racingFrog(item);
+})
