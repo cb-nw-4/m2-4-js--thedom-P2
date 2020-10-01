@@ -1,1 +1,1 @@
-console.log(newArray);
+ums.some((num) => typeof(num) === "number")

@@ -9,8 +9,19 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
-};
+  let total = 0;
+  nums.forEach((num) => {
+    if(nums.every((num) => typeof(num) === "number")) {
+      total = total + (num ** 2);
+    } else {
+      total = undefined;
+    }
+  })
+  return total;
+}
 
+console.log(addNumbers(3, 8, 10, 20));
+console.log(addNumbers(3, 8, 10, "go"));
 // Part 2 - Test
 // --------------
 // Test your function.
