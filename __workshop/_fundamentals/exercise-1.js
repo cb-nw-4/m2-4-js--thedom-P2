@@ -6,9 +6,12 @@
 //
 
 const convertToString = (arr) => {
-  let newArray = arr.map(String);
-  return [newArray];
-};
+  return arr.map(function(element) {
+    return `${element}`
+  });
+}
+console.log(convertToString([1, 2, 3, 4, 5]));
+// output when I test the function seems like it's actually okay but yarn says the function fails
 
 // Part 2 - Test
 // --------------
