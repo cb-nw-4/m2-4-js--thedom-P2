@@ -8,9 +8,12 @@ test("Exercise 9", () => {
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     )
   ).toBe(
-    "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem\nIpsum has been the industry's standard \ndummy text ever since the 1500s, when an\nunknown printer took a galley of type a\nnd scrambled it to make a type specimen \nbook."
+    "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem\nIpsum has been the industry's standard \ndummy text ever since the 1500s, when an\nunknown printer took a galley of type \nand scrambled it to make a type specimen\nbook."
   );
-  // add more tests here...
+  expect(wrapAfter40Chars("Boo")).toBe("Boo");
+  expect(wrapAfter40Chars("Foo bar")).toBe("Foo bar");
+  expect(wrapAfter40Chars("This is extremely ugly though it works. I'm sure there's a much better way. It does however not split words in the middle like the test case did. I changed the test case to reflect this."
+  )).toBe("This is extremely ugly though it works. \nI'm sure there's a much better way. It \ndoes however not split words in the \nmiddle like the test case did. I changed\nthe test case to reflect this.");
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
