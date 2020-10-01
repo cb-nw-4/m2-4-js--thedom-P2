@@ -1,1 +1,1 @@
-ums.some((num) => typeof(num) === "number")
+  // console.log(ret);

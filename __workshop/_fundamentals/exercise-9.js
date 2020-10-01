@@ -9,50 +9,17 @@
 // - To represent a newline character, you can use "\n".
 
 const wrapAfter40Chars = (paragraph) => {
-
-  // let newPara = paragraph.match(/.{1,40}/g);
-  // console.log(newPara);
-  // return newPara.join("\n");
-
-
-  // let newPara;
-  // newPara = paragraph.match(/.{1,40}/g);
-  // let newNewPara = newPara.map((line) => {
-  //   if (line[0] === " ") {
-  //     let newLine = line.trim();
-  //     return newLine;
-  //   }
-  // })
-  // return newNewPara.join("\n");
-  // console.log(newNewPara);
-
-
-  // let newPara = paragraph.match(/.{1,40}/g);
-  // console.log(newPara);
-  // newPara.forEach((line) => {
-  //   if (line[0] === " "){
-  //   let newLine = line.toString().trim();
-  //   console.log(newLine);
-  //   }
-  // })
-
   let newPara = paragraph.match(/.{1,40}/g);
-  console.log(newPara);
+  // console.log(newPara);
   let ret = "";
-  let newArray = newPara.forEach((line, index) => {
+  newPara.forEach((line, index) => {
     if (line[0] === " "){
-    console.log("Text");
-    // newPara[index][0] = "";
-    // console.log(line);
-
-    // line.replace(/^\s+/, '');
-    // console.log(line.replace(/^\s+/, ''));
+    // console.log("Text");
     newPara[index] = newPara[index].slice(1);
     }
-    // ret += newPara[index];
   })
 
-  console.log(ret);
+  // console.log(ret);
   return newPara.join("\n");;
 };
 
