@@ -11,10 +11,11 @@
 const wrapAfter40Chars = (paragraph) => {
   // Your code here
   let para=paragraph.split("");
-  for(let i=0; i<=para.length; i++){
-    if(i%40===0){
+  for(let i=40; i<=para.length; i=i+40){
+  console.log(i+"="+para[i]);
+    
       para[i]="\n"+para[i];
-    }
+
   }
   return para.join("");
 };

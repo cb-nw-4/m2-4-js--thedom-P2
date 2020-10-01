@@ -15,7 +15,7 @@ function isPalindrome(theString) {
   // Your code here
   let newstr=theString.split("").reverse().join("");
   if(newstr===theString){
-    console.log(`${theString} is a Palindrome.`);
+    return true;
   }
   else if(theString!=="string"){
     return undefined;
