@@ -10,16 +10,13 @@
 
 const wrapAfter40Chars = (paragraph) => {
   // Your code here
-  let para=paragraph.split(" ");
-  let wordlength=0;
-  for(let i=0; i<=paragraph.length; i++){
-    wordlength=wordlength+para[i].length;
-   // console.log(wordlength);
-    // if(wordlength%40===0){
-    //   para[i]="\n"+para[i];
-    // }
+  let para=paragraph.split("");
+  for(let i=0; i<=para.length; i++){
+    if(i%40===0){
+      para[i]="\n"+para[i];
+    }
   }
-  return para.join(" ");
+  return para.join("");
 };
 
 // Part 2 - Test
