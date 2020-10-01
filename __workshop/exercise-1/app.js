@@ -23,11 +23,13 @@ for (let count = 1; count <= FROGS; count++) {
 // declare a variable called racers and assign a value of: empty array
 let racers = [];
 // write a for loop
-for (let count = 1; count <= FROGS; count++) { 
-    //problem,,, can push twice same frog...
-    racers.push(frogstable[Math.floor(Math.random() * 5)]);
+for (let count = 1; count <= FROGS; count++) {     
+    const randomIndex = Math.floor(Math.random() * frogstable.length);
+    racers.push(frogstable[randomIndex]);
+    frogstable.splice(randomIndex,1);
 }
 console.log(racers);
+console.log(frogstable);
 // push a frog from frogstable into racers array
 
 // console.log racers
@@ -45,6 +47,8 @@ racers.forEach((item, index) => {
   frogName.innerHTML =  item.name;
   lane.appendChild(frogName);  
   frogName.classList.add("frog-name");
-//   lane.innerHTML += `<span style = background:${item.color}  >` + item.name + " (" + item.number + ")"+ "</span>";
-//  lane.style.background = item.color;
-})
+
+  const obj = {progress: 0, lane: lane.id};
+  racers[index] = {...item, ... obj};
+});
+console.log(racers);
