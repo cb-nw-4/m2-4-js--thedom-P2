@@ -55,11 +55,13 @@ console.log(racers);
 
 function racingFrog(racer) {
     console.log("racingFrog() ", racer);
-    const trackWidth = track.offsetWidth;    
+    const trackWidth = track.offsetWidth; 
+    let frogPosition = document.querySelector(`#${racer.lane} .frog`);   
+  
     const hop = setInterval(function () {        
         const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);        
-        racer.progress += hopLength;
-        console.log(racer.name + " is at " + racer.progress);
+        racer.progress += hopLength;       
+        frogPosition.style.left = `${racer.progress}%`;
 
         if (racer.progress >= 100){
             console.log(racer.name + " has finished!");
