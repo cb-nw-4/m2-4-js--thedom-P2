@@ -15,3 +15,13 @@ for(let i = 1; i<=FROGS; i++){
     lane.appendChild(laneNumber);
     document.getElementById("track").appendChild(lane);
 }
+
+//Exercise 1.2
+let racers = [];
+for(let i =0; i < FROGS ; i++){
+    racers.push(frogstable[i]);
+}
+
+//Exercise 1.3
+
+
