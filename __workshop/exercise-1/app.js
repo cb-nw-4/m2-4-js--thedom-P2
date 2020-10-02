@@ -72,7 +72,7 @@ function racingFrog(racer) {
 
 //Ex 1.7 **************
        const movingFrog = document.querySelectorAll(".frog");
-       const trackLength = window.innerWidth - 155;
+       const trackLength = window.innerWidth - 138;
        let relativePosition = Math.round(trackLength*racer.progress/100);
 
        for(let i =0; i<3;i++){
@@ -81,9 +81,10 @@ function racingFrog(racer) {
                movingFrog[i].style.left = `${relativePosition}px`;
            }
        }
-       
+//Ex 1.8*************
+    },Math.round((Math.random()+1)*5)*100);
 
-    },1000);
+    
   }
 
 racers.forEach(racer=> racingFrog(racer));
