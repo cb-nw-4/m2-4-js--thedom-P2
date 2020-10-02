@@ -27,7 +27,29 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  if (Array.isArray(arr1)=== true && Array.isArray(arr2)=== true) { 
+
+    function comparison (array1,array2) { 
+      let unique=[];
+      array1.forEach ((element1)=> { 
+        let count=0;
+        array2.forEach ((element2)=> { 
+          if ( element1 !== element2) { count+=1; }; 
+          if( count === array2.length ) { unique.push(element1);}
+        });
+      });
+      return unique;  
+    }; 
+  
+    let unique1 = comparison(arr1,arr2);
+    let unique2= comparison(arr2,arr1);
+    let uniqueFinal = [...unique1, ...unique2];
+    console.log(uniqueFinal);
+    return uniqueFinal;
+
+  } else { 
+    return undefined; 
+  }; 
 };
 
 // Part 2 - Test
