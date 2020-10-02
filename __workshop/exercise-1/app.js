@@ -32,6 +32,8 @@ let newID="";
         frog.className = "frog";
         frog.innerText = `${element.name} (${element.number})`;
         frog.style.backgroundColor = element.color;
+        element.progress = 0;
+        element.lane = i+1;
         document.getElementById(laneString.concat(i+1)).appendChild(frog);
     });
 
