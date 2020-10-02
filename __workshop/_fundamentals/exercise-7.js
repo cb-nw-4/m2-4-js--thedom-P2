@@ -15,6 +15,14 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+  if (typeof obj !== "object") { 
+    return arr;  
+  } else { 
+    let newArr = arr.map ((item)=> { 
+      return item = {...item,...obj}; 
+    }); 
+    return newArr;
+  }; 
 };
 
 // Part 2 - Test

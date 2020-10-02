@@ -12,6 +12,13 @@
 
 const count = (arr, key) => {
   // Insert missing solution please
+  let sum = 0;
+  arr.forEach(item =>{
+    if (item[key] > 0) {
+      sum += item[key];
+    }
+  })
+  return sum
 };
 
 // Part 2 - Test

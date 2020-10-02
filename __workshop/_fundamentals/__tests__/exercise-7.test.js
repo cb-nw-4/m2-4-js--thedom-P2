@@ -18,6 +18,30 @@ test("Exercise 7", () => {
     { name: "dave", age: 43, isAvailable: true },
   ]);
   // add more tests here...
+  expect(
+    addValues([{ name: "Bob", age: 23 }, { name: "Josie", age: 23 }], { isAvailable: true })
+  ).toStrictEqual([
+    { name: "Bob", age: 23, isAvailable: true },
+    { name: "Josie", age: 23, isAvailable: true },
+  ]);
+  expect(
+    addValues([{ name: "Bob", age: 23 }, { name: "Josie", age: 23 }, { name: "Josie3", age: 23 }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Bob", age: 23, isAvailable: false },
+    { name: "Josie", age: 23, isAvailable: false },
+    { name: "Josie3", age: 23, isAvailable: false },
+  ]);
+  expect(
+    addValues([{ name: "Bob", age: 23 }, { name: "Josie", age: 23 }, { name: "Josie3", age: 23 }], true)
+  ).toStrictEqual([
+    { name: "Bob", age: 23 },
+    { name: "Josie", age: 23 },
+    { name: "Josie3", age: 23},
+  ]);
+  expect(
+    addValues([], { isAvailable: false })
+  ).toStrictEqual([
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

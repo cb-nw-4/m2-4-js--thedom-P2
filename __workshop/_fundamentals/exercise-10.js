@@ -28,6 +28,16 @@
 
 const uniqueElements = (arr1, arr2) => {
   // Your code here
+  let newArr = arr1.concat(arr2);
+  let answer = []; 
+  newArr.forEach((item) => {
+    if (arr1.includes(item) === true && arr2.includes(item) === true) {
+
+    } else {
+      answer.push(item);
+    }
+  })
+  return answer;
 };
 
 // Part 2 - Test
