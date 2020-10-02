@@ -18,7 +18,7 @@ test("Exercise 7", () => {
     { name: "dave", age: 43, isAvailable: true },
   ]);
   expect(
-    addedValues(
+    addValues(
       [
         {name: "Claude Monet"},
         {name: "Edgar Degas"},
@@ -32,7 +32,7 @@ test("Exercise 7", () => {
     {name: "Pierre-August Renoir", isImpressionist: true}
   ));
   expect(
-    addedValues(
+    addValues(
       [
         {name: "Scribbles"},
         {name: "Mr. Scoops"},
