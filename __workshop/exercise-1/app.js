@@ -33,7 +33,7 @@ racers.forEach((item, index) => {
   let frog = document.createElement("span");
   frog.innerHTML = item.number ;
   lane.appendChild(frog);
-  frog.style.background = item.color;
+  frog.style.backgroundColor = item.color;
   frog.classList.add("frog");
 
   let frogName = document.createElement("span");
@@ -52,9 +52,15 @@ const results = () => {
     ranking.forEach((item, index) => {
         let i = index + 1;
         console.log("The " + i + " place goes to: " + item.name);
+        let frog = document.querySelector(`#${item.lane} .frog`);
+        frog.classList.add(`frog-${i}`);        
     });
+    let winner = document.createElement("h2");
+    winner.innerHTML = `The winner is ${ranking[0].name}!`
+    winner.style.color = "red";
+    track.appendChild(winner);
 }
-function racingFrog(racer, func) {
+function racingFrog(racer, results) {
     const randomDelay = Math.floor(Math.random() * 800) + 200;  
     console.log("racingFrog() ", racer);
     const trackWidth = track.offsetWidth; 
@@ -69,13 +75,11 @@ function racingFrog(racer, func) {
             console.log(racer.name + " has finished!");
             ranking.push(racer);           
             if (racers.length === ranking.length){
-                func();
+                results();
             }  
-            clearInterval(hop);        
-        }   
-        
-      },  randomDelay); 
-     
+            clearInterval(hop);       
+        } 
+      },  randomDelay);      
   }
 
 racers.forEach(item => {

@@ -21,7 +21,7 @@ test("Exercise 1", () => {
   expect(convertToString([1, 10])).toStrictEqual([
     "1",    
     "10",
-  ]);
+  ]);  
   expect(convertToString([])).toStrictEqual([]);
   expect(convertToString(3)).toBe(undefined);
 });
