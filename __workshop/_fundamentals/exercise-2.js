@@ -9,8 +9,14 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
-};
+
+  return arr.map(word => {
+    if (typeof word === "string") {
+        return "redacted";
+      }
+      return word;
+    });
+  };
 
 // Part 2 - Test
 // --------------
