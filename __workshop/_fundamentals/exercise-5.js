@@ -9,6 +9,11 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  if (nums.length === 0) {
+    return undefined;
+  }
+
+  return nums.filter(i => typeof(i) === "number").map(x => x**2).reduce((a, b) => a + b, 0);
 };
 
 // Part 2 - Test

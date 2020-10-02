@@ -10,6 +10,13 @@
 
 const redacted = (arr) => {
   // Insert missing solution please
+  return arr.map(function(i) {
+    if (typeof i === "string") {
+      return i = "redacted";
+    } else {
+      return i = i;
+    }
+  });
 };
 
 // Part 2 - Test
