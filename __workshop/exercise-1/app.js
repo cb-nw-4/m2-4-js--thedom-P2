@@ -22,7 +22,7 @@ for(let i =0; i < FROGS ; i++){
     racers.push(frogstable[i]);
 }
 
-//Exercise 1.3
+//Exercise 1.3 and 1.5
 let frog;
 const laneString = "lane-";
 let newID="";
@@ -50,8 +50,32 @@ racers.forEach(function(element,i){
     document.getElementById(laneString.concat(i+1)).appendChild(frogName);
 });
 
+//Ex 1.6
+    
+function racingFrog(racer) {
+    console.log("racingFrog() ", racer);
+    const trackWidth = track.offsetWidth;
+    let tempProgress = 0;
 
-    
-    
+    let hop = setInterval(function(){
+        const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);
+        tempProgress += hopLength;
+
+        if(tempProgress<100){
+            racer.progress +=hopLength;
+        }
+        else { 
+            clearInterval(hop);
+            racer.progress = 100;
+            console.log(`${racer.name} reached the end!`);
+        }
+        console.log(`${racer.name} is at ${racer.progress}`);
+       
+    },1000);
+  }
+
+racers.forEach(racer=> racingFrog(racer));
+
+
 
 
