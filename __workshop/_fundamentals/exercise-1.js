@@ -3,11 +3,13 @@
 // Part 1 - Write
 // ---------------
 // Write a function accepts an array of values and returns a new array of stringified values.
-//
+//map
 
 const convertToString = (arr) => {
-  // Insert missing solution please
-};
+  let newArr = arr.map((element) => String(element)
+    ) 
+    return newArr
+}
 
 // Part 2 - Test
 // --------------
