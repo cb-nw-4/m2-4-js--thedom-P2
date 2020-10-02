@@ -27,7 +27,31 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+ 
+  let foundDouble = 0;
+  let unique = [];
+
+  if(!Array.isArray(arr1)||!Array.isArray(arr2)){
+    return undefined;
+  }
+
+  function lookForDouble(a,b){
+    for(let u = 0; u<a.length; u++){
+
+      for(let i = 0; i<b.length ; i++){
+        if(a[u]==b[i]){ foundDouble +=1;}
+      }
+
+      if(foundDouble==0){ unique.push(a[u]);}
+
+      foundDouble = 0;
+    }
+  };
+
+  lookForDouble(arr1,arr2);
+  lookForDouble(arr2,arr1);
+
+  return unique;
 };
 
 // Part 2 - Test
