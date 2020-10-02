@@ -29,6 +29,12 @@ test("Exercise 3", () => {
     { colour: "purple", isPrimary : false },
     { colour: "orange", isPrimary : false },
   ]);
+  expect(
+    insert([{ colour: "purple" }, { colour: "orange" } ], 21)
+  ).toStrictEqual([
+    { colour: "purple"},
+    { colour: "orange"},
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
