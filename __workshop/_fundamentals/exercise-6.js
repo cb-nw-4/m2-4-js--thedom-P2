@@ -12,7 +12,20 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+  if (typeof theString!== "string") {
+    return undefined;
+  } else { 
+    let reversedString=""; 
+  for (let i=0; i<theString.length; i++) { 
+    reversedString += theString[theString.length-1-i]; 
+  };
+  console.log(reversedString); 
+  if ( theString === reversedString) { 
+    return true;
+  } else { 
+    return false; 
+  }
+  };
 }
 
 // Part 2 - Test

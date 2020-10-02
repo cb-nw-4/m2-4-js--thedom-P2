@@ -7,6 +7,10 @@
 
 const convertToString = (arr) => {
   // Insert missing solution please
+  let newArr = arr.map ((element)=> { 
+    return String(element); 
+  }); 
+  return newArr; 
 };
 
 // Part 2 - Test

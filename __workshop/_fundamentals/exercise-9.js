@@ -8,8 +8,17 @@
 // - If the next character after a cut is a space, then do not display it.
 // - To represent a newline character, you can use "\n".
 
+
 const wrapAfter40Chars = (paragraph) => {
   // Your code here
+  let para=paragraph.split("");
+  for(let i=40; i<=para.length; i=i+40){
+    if(para[i]===" "){
+      para[i]="";
+    }
+    para[i]="\n"+para[i];
+  }
+  return para.join("");
 };
 
 // Part 2 - Test
