@@ -9,7 +9,18 @@ test("Exercise 3", () => {
     { name: "Bob", isAvailable: false },
     { name: "Josie", isAvailable: false },
   ]);
-  // add more tests here...
+  expect(
+    insert([{location: "Montreal"}, {location: "Toronto"}], {inCanada: true})
+  ).toStrictEqual([
+    {location: "Montreal", inCanada: true},
+    {location: "Toronto", inCanada: true},
+  ])
 });
+  expect(
+    insert([{artist: "Kiki Smith"}, {artist: "Georgia O'Keeffe"}], {isWoman: true})
+  ).toStrictEqual([
+    {artist: "Kiki Smith", isWoman: true},
+    {artist: "Georgia O'Keeffe", isWoman: true},
+  ]);
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
