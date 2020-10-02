@@ -11,6 +11,13 @@ test("Exercise 9", () => {
     "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem\nIpsum has been the industry's standard \ndummy text ever since the 1500s, when an\nunknown printer took a galley of type a\nnd scrambled it to make a type specimen \nbook."
   );
   // add more tests here...
+  expect(
+    wrapAfter40Chars(
+      "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog."
+    )
+  ).toBe(
+    "The quick brown fox jumps over the lazy \ndog. The quick brown fox jumps over the \nlazy dog."
+  );
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
