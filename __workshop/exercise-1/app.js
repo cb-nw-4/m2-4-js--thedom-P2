@@ -23,5 +23,21 @@ for(let i =0; i < FROGS ; i++){
 }
 
 //Exercise 1.3
+let frog;
+const laneString = "lane-";
+let newID="";
+
+    racers.forEach(function(element,i) {
+        frog = document.createElement("span");
+        frog.class = "frog";
+        frog.innerText = `${element.name} (${element.number})`;
+        frog.style.backgroundColor = element.color;
+        document.getElementById(laneString.concat(i+1)).appendChild(frog);
+    });
+
+
+
+    
+    
 
 
