@@ -17,7 +17,34 @@ test("Exercise 7", () => {
     { name: "liv", age: 36, isAvailable: true },
     { name: "dave", age: 43, isAvailable: true },
   ]);
-  // add more tests here...
+  expect(
+    addedValues(
+      [
+        {name: "Claude Monet"},
+        {name: "Edgar Degas"},
+        {name: "Pierre-August Renoir"},
+      ],
+      {isImpressionist: true}
+    )
+  ).toStrictEqual((
+    {name: "Claude Monet", isImpressionist: true},
+    {name: "Edgar Degas", isImpressionist: true},
+    {name: "Pierre-August Renoir", isImpressionist: true}
+  ));
+  expect(
+    addedValues(
+      [
+        {name: "Scribbles"},
+        {name: "Mr. Scoops"},
+        {name: "Sushi"},
+      ],
+      {isCat: true}
+    )
+  ).toStrictEqual((
+    {name: "Scribbles", isCat: true},
+    {name: "Mr. Scoops", isCat: true},
+    {name: "Sushi", isCat: true}  
+  ))
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
