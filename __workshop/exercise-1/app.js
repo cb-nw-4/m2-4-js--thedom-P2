@@ -69,12 +69,28 @@ function racingFrog(racer) {
             racer.progress = 100;
             console.log(`${racer.name} reached the end!`);
         }
-        console.log(`${racer.name} is at ${racer.progress}`);
+
+//Ex 1.7 **************
+       const movingFrog = document.querySelectorAll(".frog");
+       const trackLength = window.innerWidth - 155;
+       let relativePosition = Math.round(trackLength*racer.progress/100);
+
+       for(let i =0; i<3;i++){
+           if(movingFrog[i].innerText == racer.number)
+           {
+               movingFrog[i].style.left = `${relativePosition}px`;
+           }
+       }
        
+
     },1000);
   }
 
 racers.forEach(racer=> racingFrog(racer));
+
+
+
+
 
 
 
