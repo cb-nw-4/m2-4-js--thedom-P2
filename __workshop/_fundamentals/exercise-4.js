@@ -11,8 +11,26 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
-};
+  let sum = 0;
+  let keyValid = 0;
+
+  
+  let newArr = arr.map(object => {
+    if (typeof object[key] === "number") {
+      keyValid = 1;
+      return sum = sum + object[key]};
+  });
+
+  if (keyValid === 1) return sum;
+  else return "Please choose another key"; 
+}
+  
+  //     if (key === object[key] && typeof object[key] === "number")
+  //     return sum = sum + object[key];
+
+  // })
+  // return sum;
+
 
 // Part 2 - Test
 // --------------

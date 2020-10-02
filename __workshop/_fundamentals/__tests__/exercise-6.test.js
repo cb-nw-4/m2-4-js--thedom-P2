@@ -7,4 +7,19 @@ test("Exercise 6", () => {
   // add more tests here...
 });
 
+test("Exercise 6", () => {
+  expect(isPalindrome("JAVASCRIPT")).toBe(false);
+  // add more tests here...
+});
+
+test("Exercise 6", () => {
+  expect(isPalindrome("kayak")).toBe(true);
+  // add more tests here...
+});
+
+test("Exercise 6", () => {
+  expect(isPalindrome("palindrome")).toBe(false);
+  // add more tests here...
+});
+
 // More info on jest expect: https://jestjs.io/docs/en/expect

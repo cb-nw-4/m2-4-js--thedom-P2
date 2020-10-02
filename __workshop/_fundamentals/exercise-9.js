@@ -9,7 +9,14 @@
 // - To represent a newline character, you can use "\n".
 
 const wrapAfter40Chars = (paragraph) => {
-  // Your code here
+  newArr = paragraph.split("");
+  for (i=40;i<newArr.length;i=i+39)
+  {
+    newArr.splice((i), 0, `\n`);
+    if (newArr[i+1] === " ") newArr[i+1] = "";
+    i=i+2;
+  }
+return newArr.join("");
 };
 
 // Part 2 - Test

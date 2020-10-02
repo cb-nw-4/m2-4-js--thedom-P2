@@ -12,7 +12,33 @@ test("Exercise 4", () => {
       "amount"
     )
   ).toBe(145);
+
+  
   // add more tests here...
 });
+
+  test("Exercise 4", () => {
+    expect(
+      count(
+        [
+          { name: "Bob", amount: 200 },
+          { name: "Josie", amount: 55 },
+        ],
+        "amount"
+      )
+    ).toBe(255); 
+  });
+
+  test("Exercise 4", () => {
+    expect(
+      count(
+        [
+          { name: "Bob", amount: 200 },
+          { name: "Josie", amount: 55 },
+        ],
+        "name"
+      )
+    ).toBe("Please choose another key"); 
+  });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

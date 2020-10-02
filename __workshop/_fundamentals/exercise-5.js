@@ -8,7 +8,13 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  if (nums.length > 0) {
+  let newArr = nums.map(number => {
+      if (typeof number === "number") return number*number;
+      else return 0;})
+  return newArr.reduce((sum, number) => sum = sum + number);
+    }
+  else return undefined;  
 };
 
 // Part 2 - Test
