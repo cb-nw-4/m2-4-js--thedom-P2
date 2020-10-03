@@ -15,7 +15,13 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+  let newArray = arr.map((user) => {
+    let value = {...user, ...obj};
+    return value;
+  })
+  return newArray;
 };
+console.log(addValues([{name: 'chris', age: 23}, {name: 'liv', age: 36}, {name: 'dave', age: 43}], {isAvailable: true}));
 
 // Part 2 - Test
 // --------------
