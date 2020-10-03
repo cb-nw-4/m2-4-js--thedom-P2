@@ -60,7 +60,7 @@ const results = () => {
     winner.style.color = "red";
     track.appendChild(winner);
 }
-function racingFrog(racer, results) {
+function racingFrog(racer, func) {
     const randomDelay = Math.floor(Math.random() * 800) + 200;  
     console.log("racingFrog() ", racer);
     const trackWidth = track.offsetWidth; 
@@ -75,7 +75,7 @@ function racingFrog(racer, results) {
             console.log(racer.name + " has finished!");
             ranking.push(racer);           
             if (racers.length === ranking.length){
-                results();
+                func();
             }  
             clearInterval(hop);       
         } 
