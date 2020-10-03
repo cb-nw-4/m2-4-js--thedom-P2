@@ -88,7 +88,7 @@ function racingFrog(racer) {
             clearInterval(hop);
         }
         
-    },Math.random() *1300);  
+    },Math.random() *2300);  
 }
 
 racers.forEach(function(racer) {
@@ -104,7 +104,7 @@ let grandfinale=setInterval(function() {
         for(let k=0;k<ranking.length;k++){
             console.log(ranking[k].name+" holds "+position[k]+" position!");
             let texter=document.createElement('p');
-            texter.innerText=`${ranking[k].name} holds ${position[k]} position!`;
+            texter.innerText=`${ranking[k].name} holds the ${position[k]} position!`;
             texter.style.textAlign="center";
             texter.style.fontFamily="Playfair Display, serif";
             texter.style.fontSize="1.5em";
