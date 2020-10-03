@@ -9,7 +9,11 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+  if (typeof arr !== "object") {
+    return undefined;
+  }
+  let newArr = arr.map(element => typeof element === "string" ? "redacted" : element);
+  return newArr;
 };
 
 // Part 2 - Test

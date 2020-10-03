@@ -14,7 +14,17 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const addValues = (arr, obj) => {
-  // Insert missing solution please
+  if (typeof arr !== "object") {
+    return undefined;
+  }
+  else if (arr.every(element => typeof element !== "object")) {
+    return undefined;
+  }
+  else if (typeof obj !== "object") {
+    return undefined;
+  }
+  let newArr = arr.map(element => {return {...element, ...obj}});
+  return newArr;
 };
 
 // Part 2 - Test
