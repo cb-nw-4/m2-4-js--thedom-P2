@@ -15,9 +15,12 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  if (typeof obj === 'object') return Object.assign(arr,obj);
-  else arr;
-};
+  return arr.map(element => 
+    {
+    if (typeof obj === 'object') return Object.assign(element,obj);
+    else return element;
+    })
+}
 
 // Part 2 - Test
 // --------------

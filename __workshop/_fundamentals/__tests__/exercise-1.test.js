@@ -10,6 +10,7 @@ test("Exercise 1", () => {
     "4",
     "5",
   ]);
+});
 
   test("Exercise 1", () => {
     expect(convertToString([6, 6, 6, 6, 6])).toStrictEqual([
