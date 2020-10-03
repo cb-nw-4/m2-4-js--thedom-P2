@@ -60,7 +60,10 @@ function racingFrog(racer) {
         clearInterval(hop);
         console.log(`${racer.name} has finished!`);
         }
-    }, 100);  
+    }, 100); 
+
+    let moveFrog = document.getElementsByClassName('frog');
+    moveFrog[i].style.left = `${racer.progress}%`;
 
     console.log("racingFrog() ", racer);
 }
