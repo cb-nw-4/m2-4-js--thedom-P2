@@ -9,6 +9,14 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  if (nums.length===0){
+    return undefined;
+  }
+  else{
+  return nums.reduce((previous, current) => {
+    return previous + current*current;
+  },0);}
+
 };
 
 // Part 2 - Test

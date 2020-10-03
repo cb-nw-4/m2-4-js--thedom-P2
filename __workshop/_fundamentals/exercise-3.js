@@ -16,6 +16,15 @@
 
 const insert = (arr, obj) => {
   // Insert missing solution please
+  let finalarray=[];
+  if (typeof obj!=="object"){
+    return arr;
+  }
+  else{
+  for(let i=0; i<arr.length;i++){
+  finalarray[i] = Object.assign(arr[i], obj);
+  }
+  return finalarray;}
 };
 
 // Part 2 - Test

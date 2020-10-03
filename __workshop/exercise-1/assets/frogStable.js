@@ -24,4 +24,14 @@ const frogstable = [
     color: "black",
     number: "8",
   },
+  {
+    name: "Webs",
+    color: "pink",
+    number: "22",
+  },
+  {
+    name: "Sleeper",
+    color: "orange",
+    number: "45",
+  }
 ];
