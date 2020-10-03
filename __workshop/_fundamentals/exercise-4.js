@@ -12,13 +12,12 @@
 
 const count = (arr, key) => {
   
-
-  return arr.reduce((previous, current) => {
-    if (typeof key != "string"){
-      return previous[key] + current[key]
+  let result = 0
+  arr.forEach((element) => {
+    result = result + element[key]
     }
-    
-  })
+)
+  return result
 }
 
 
