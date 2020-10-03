@@ -12,6 +12,17 @@
 
 const count = (arr, key) => {
   // Insert missing solution please
+  if (!Array.isArray(arr)) {
+    return undefined;
+  } 
+
+  let sum = 0;
+  arr.forEach(el => {       
+    if (typeof el[key] === "number")
+      sum += el[key];
+  });
+
+  return sum;
 };
 
 // Part 2 - Test

@@ -16,6 +16,17 @@
 
 const insert = (arr, obj) => {
   // Insert missing solution please
+  if (!Array.isArray(arr)) {
+    return undefined;
+  }
+  
+  if (Array.isArray(obj) || typeof obj !== 'object')
+    return arr;
+
+  return arr.map(el => {   
+    return {...el, ...obj};
+  });
+
 };
 
 // Part 2 - Test

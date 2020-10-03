@@ -10,6 +10,11 @@
 
 const redacted = (arr) => {
   // Insert missing solution please
+  if (!Array.isArray(arr)) {
+    return undefined;
+  }
+
+  return arr.map(el => typeof el === "string" ? "redacted" : el);
 };
 
 // Part 2 - Test
