@@ -27,7 +27,14 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+   return undefined;
+  }
+
+  let arrBoth = [...arr1, ...arr2];
+    return arrBoth.filter(num => !arr1.includes(num) || !arr2.includes(num));
+    
 };
 
 // Part 2 - Test
