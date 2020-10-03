@@ -11,7 +11,19 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+
+  let sum =0;
+  arr.forEach(element => {
+
+    if(element.hasOwnProperty(key) && typeof element[key]=="number"){
+      sum+= element[key];
+    }
+    
+  });
+
+  return sum;
+
+  
 };
 
 // Part 2 - Test

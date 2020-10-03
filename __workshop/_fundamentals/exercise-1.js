@@ -6,7 +6,11 @@
 //
 
 const convertToString = (arr) => {
-  // Insert missing solution please
+
+  if(Array.isArray(arr)){
+    return arr.map(number => number.toString()) ;
+  }
+  return undefined ;
 };
 
 // Part 2 - Test

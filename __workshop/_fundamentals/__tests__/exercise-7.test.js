@@ -18,6 +18,38 @@ test("Exercise 7", () => {
     { name: "dave", age: 43, isAvailable: true },
   ]);
   // add more tests here...
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+        { name: "ann", age: 2 },
+      ],
+      { finishedAssignment: false }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, finishedAssignment: false },
+    { name: "liv", age: 36, finishedAssignment: false },
+    { name: "dave", age: 43, finishedAssignment: false },
+    { name: "ann", age: 2, finishedAssignment: false },
+  ]);
+
+  //if 2nd argument missing
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+        { name: "ann", age: 2 },
+      ],
+    )
+  ).toStrictEqual(null);
+
+
+
+
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

@@ -15,6 +15,19 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+
+  if (typeof obj === "object" && Array.isArray(arr)){
+    let peopleArray = arr.slice(0,arr.length);
+    let newKey = Object.keys(obj);
+
+    peopleArray.forEach(person => {
+      person[newKey] = obj[newKey];
+    });
+    
+   return peopleArray;
+  }
+
+  return null;
 };
 
 // Part 2 - Test

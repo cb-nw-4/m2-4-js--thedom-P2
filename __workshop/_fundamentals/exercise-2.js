@@ -9,7 +9,15 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+
+  if(Array.isArray(arr)){
+    return arr.map(item =>{
+      if(typeof item == "string"){ return "redacted";}
+      else { return item;}
+    });
+  }
+
+  return undefined;
 };
 
 // Part 2 - Test

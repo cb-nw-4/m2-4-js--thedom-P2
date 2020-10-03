@@ -15,7 +15,19 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+
+  if (typeof obj === "object" && Array.isArray(arr)){
+    let peopleArray = arr.slice(0,arr.length);
+    let newKey = Object.keys(obj);
+
+    peopleArray.forEach(person => {
+      person[newKey] = obj[newKey];
+    });
+    
+   return peopleArray;
+  }
+
+  return arr;
 };
 
 // Part 2 - Test
