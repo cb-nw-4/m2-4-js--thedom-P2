@@ -10,7 +10,26 @@ test("Exercise 1", () => {
     "4",
     "5",
   ]);
-  // add more tests here...
+});
+
+  test("Exercise 1", () => {
+    expect(convertToString([6, 6, 6, 6, 6])).toStrictEqual([
+      "6",
+      "6",
+      "6",
+      "6",
+      "6",
+    ]);
+});
+
+test("Exercise 1", () => {
+  expect(convertToString([9, 8, 4, 3, 1])).toStrictEqual([
+    "9",
+    "8",
+    "4",
+    "3",
+    "1",
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

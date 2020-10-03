@@ -12,4 +12,14 @@ test("Exercise 3", () => {
   // add more tests here...
 });
 
+test("Exercise 3", () => {
+  expect(
+    insert([{ name: "Bob" }, { name: "Josie" }], 2)
+  ).toStrictEqual([
+    { name: "Bob"},
+    { name: "Josie"},
+  ]);
+  // add more tests here...
+});
+
 // More info on jest expect: https://jestjs.io/docs/en/expect

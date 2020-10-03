@@ -27,9 +27,25 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
-};
+  
+    function amIUnique(a,b){
+      let newArr = [];
+      for (j=0; j<b.length; j++)
+        {
+          let uTest = true;
+          for (i=0; i<a.length; i++)
+              {
+                if (a[i] === b[j]) uTest = false;
+                else uTest = uTest && true; 
+              }
+          if (uTest === true) newArr.push(b[j]);  
+        }
+      return newArr;
+     ;}
+     
+return amIUnique(arr2,arr1).concat(amIUnique(arr1,arr2));
 
+  }
 // Part 2 - Test
 // --------------
 // Test your function.
