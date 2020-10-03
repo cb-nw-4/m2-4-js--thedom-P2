@@ -47,6 +47,8 @@ main {
   padding: 0 10px;
 }
 .frog {
+  background-image: url('../assets/frogx50.png');
+  transform: rotate(90deg);
   border-radius: 50%;
   color: #fff;
   font-weight: 700;
