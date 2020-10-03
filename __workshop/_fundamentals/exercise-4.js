@@ -11,8 +11,16 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
-};
+  
+
+  return arr.reduce((previous, current) => {
+    if (typeof key != "string"){
+      return previous[key] + current[key]
+    }
+    
+  })
+}
+
 
 // Part 2 - Test
 // --------------
