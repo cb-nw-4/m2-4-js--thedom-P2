@@ -3,13 +3,32 @@ const insert = require("../exercise-3");
 
 // Write 3 more expect functions to test the function you just wrote.
 test("Exercise 3", () => {
-  expect(
-    insert([{ name: "Bob" }, { name: "Josie" }], { isAvailable: false })
-  ).toStrictEqual([
-    { name: "Bob", isAvailable: false },
-    { name: "Josie", isAvailable: false },
-  ]);
-  // add more tests here...
+    expect(
+        insert([{ name: "Bob" }, { name: "Josie" }], { isAvailable: false })
+    ).toStrictEqual([
+        { name: "Bob", isAvailable: false },
+        { name: "Josie", isAvailable: false },
+    ]);
+    // add more tests here...
+    expect(
+        insert([{ name: "Bob" }, { name: "Josie" }])
+    ).toStrictEqual([
+        { name: "Bob" },
+        { name: "Josie" },
+    ]);
+
+    expect(
+        insert([{ name: "" }, { name: "" }], { isAvailable: false })
+    ).toStrictEqual([
+        { name: "", isAvailable: false },
+        { name: "", isAvailable: false },
+    ]);
+
+    // expect(
+    //     insert([], { isAvailable: false })
+    // ).toStrictEqual([
+    //     undefined
+    // ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

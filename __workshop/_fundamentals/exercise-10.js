@@ -27,7 +27,23 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+    // Your code here
+
+    if (typeof(arr1) === 'object' && typeof(arr2) === 'object') {
+
+        arr = [...arr1, ...arr2]
+
+        let filterArray = [];
+
+        return filterArray = arr.filter(element => {
+            return (arr.indexOf(element) == arr.lastIndexOf(element))
+        });
+
+    } else {
+        return undefined;
+    }
+
+
 };
 
 // Part 2 - Test
