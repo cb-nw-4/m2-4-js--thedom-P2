@@ -11,8 +11,20 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
-};
+    // Insert missing solution please
+
+    let total = 0;
+    arr.forEach(element => {
+        Object.keys(element).filter((keyObj) => {
+            if (keyObj == key && typeof(element[keyObj]) === 'number') {
+                total += element[keyObj];
+            } else if (keyObj == key && typeof(element[keyObj]) != 'number') {
+                total = total;
+            }
+        })
+    });
+    return total;
+}
 
 // Part 2 - Test
 // --------------

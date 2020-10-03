@@ -9,7 +9,19 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+    // Insert missing solution please
+
+    let redArr = arr.map(element => {
+        if (typeof(element) === 'string') {
+            return 'redacted'
+        } else {
+            return element
+        }
+    })
+
+    return redArr;
+
+
 };
 
 // Part 2 - Test

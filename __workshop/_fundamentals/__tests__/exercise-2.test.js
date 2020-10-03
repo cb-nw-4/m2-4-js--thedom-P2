@@ -3,8 +3,11 @@ const redacted = require("../exercise-2");
 
 // Write 3 more expect functions to test the function you just wrote.
 test("Exercise 2", () => {
-  expect(redacted(["bacon", false, 42])).toStrictEqual(["redacted", false, 42]);
-  // add more tests here...
+    expect(redacted(["bacon", false, 42])).toStrictEqual(["redacted", false, 42]);
+    // add more tests here...
+    expect(redacted([""])).toStrictEqual(["redacted"]);
+    expect(redacted([])).toStrictEqual([]);
+    expect(redacted(["bacon", "false", "42"])).toStrictEqual(["redacted", "redacted", "redacted"]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

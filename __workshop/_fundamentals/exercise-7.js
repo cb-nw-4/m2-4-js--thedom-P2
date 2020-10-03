@@ -14,7 +14,16 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const addValues = (arr, obj) => {
-  // Insert missing solution please
+    // Insert missing solution please
+    if (typeof(obj) === 'object' && arr.length !== 0) {
+
+        return arr.map((element) => {
+            return {...element, ...obj }
+        });
+
+    } else {
+        return null;
+    }
 };
 
 // Part 2 - Test

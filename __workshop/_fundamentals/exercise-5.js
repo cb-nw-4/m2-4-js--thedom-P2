@@ -8,8 +8,29 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+    // Insert missing solution please
+
+
+
+    if (nums.length > 0) {
+        let total = 0;
+        nums.forEach(num => {
+            if (typeof(num) === 'number') {
+                total += Math.pow(num, 2);
+            } else {
+                total = total;
+            }
+
+        })
+        return total
+    } else {
+        return undefined;
+    }
+
+
+
 };
+
 
 // Part 2 - Test
 // --------------
