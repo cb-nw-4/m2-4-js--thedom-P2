@@ -35,6 +35,9 @@ racers.forEach((frog, i) => {
   frogNameNode.className = `frog-name`;
 });
 
+function random () {return Math.round(Math.random() * 3000)}  
+
+
 function racingFrog(racer) {
   const trackWidth = track.offsetWidth;
   const hop = setInterval(function () {
@@ -49,7 +52,8 @@ function racingFrog(racer) {
     const getFrog = document.querySelector(`#${racer.lane} .frog`);
     console.log(getFrog)
     getFrog.style.left = `${racer.progress}%`;
-  }, 1000);
+    console.log(random)
+  }, random());
 }
 
 racers.forEach((frog) => {
