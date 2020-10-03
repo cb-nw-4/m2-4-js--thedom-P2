@@ -12,7 +12,19 @@
 
 const count = (arr, key) => {
   // Insert missing solution please
+  let total = 0
+  arr.forEach(el => {
+    if (el[key] > 0){
+      total = total + el[key]
+    }
+    else {
+      total = total
+    }
+  })
+  return total
 };
+
+count([{ name: "Bob", amount: 100 }, { name: "Josie", amount: 45 }], 'amount')
 
 // Part 2 - Test
 // --------------

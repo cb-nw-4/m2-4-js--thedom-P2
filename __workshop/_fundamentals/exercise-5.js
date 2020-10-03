@@ -9,8 +9,31 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+
+  if (nums.length < 1){
+    return 'undefined'
+  }
+
+  const newArr = nums.filter((el) => {
+    if (typeof el !== "number") {
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  // console.log(newArr)
+
+  const multiplyArr = newArr.map((num) => {
+    return num * num;
+  });
+
+  return multiplyArr.reduce((accum, curr) => {
+    return accum + curr;
+  }, 0);
 };
 
+// addNumbers(4,5,,7,8,9)
 // Part 2 - Test
 // --------------
 // Test your function.

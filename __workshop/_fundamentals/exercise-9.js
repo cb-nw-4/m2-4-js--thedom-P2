@@ -8,9 +8,22 @@
 // - If the next character after a cut is a space, then do not display it.
 // - To represent a newline character, you can use "\n".
 
+
 const wrapAfter40Chars = (paragraph) => {
   // Your code here
+  let para=paragraph.split("");
+  for(let i=40; i<=para.length; i=i+40){
+    if(para[i]===" "){
+      para[i]="";
+    }
+    para[i]="\n"+para[i];
+  }
+  return para.join("");
 };
+
+wrapAfter40Chars(
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+);
 
 // Part 2 - Test
 // --------------
