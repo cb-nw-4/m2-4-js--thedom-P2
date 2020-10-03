@@ -27,8 +27,65 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
-};
+  if (typeof arr1 !== "object" || typeof arr2 !== "object") {
+    return undefined;
+  }
+
+  let result = [];
+  for (let x = 0; x <= arr1.length; x++) {
+    let isDuplicate = false;
+    for (let y = 0; y <= arr2.length; y++) {
+      if (arr1[x] === arr2[y]) {
+        isDuplicate = true;
+      }
+    }
+    if (isDuplicate === false) {
+      result.push(arr1[x]);
+    }
+  }
+
+  for (let y = 0; y <= arr2.length; y++) {
+    let isDuplicate = false;
+    for (let x = 0; x <= arr1.length; x++) {
+      if (arr1[x] === arr2[y]) {
+        isDuplicate = true;
+      }
+    }
+    if (isDuplicate === false || result.includes(arr2[y])) {
+      result.push(arr2[y])
+    }
+  }
+  console.log(result);
+  return result;
+}
+
+
+//   for (x = 0; x <= arr1.length; x++) {
+//     let isDuplicate = 
+//     for (y = 0; y <= arr2.length; y++) {
+//       if (x === y) {
+//         let newArr1 = arr1.splice(x, 1);
+//         console.log(newArr1);
+//         return newArr1;
+//       }
+//     }
+//   }
+
+//   for (y = 0; y <= arr2.length; y++) {
+//     for (x = 0; x <= arr1.length; x++) {
+//       if (y !== x) {
+//         let newArr2 = arr2.push(y);
+//         console.log(newArr2);
+//         return newArr2;
+//       }
+//     }
+//   }
+
+//   let result = newArr1.concat(newArr2);
+//   return result;
+// };
+
+// uniqueElements([0, 1, 2, 3], [1, 3, 4, 5])
 
 // Part 2 - Test
 // --------------
