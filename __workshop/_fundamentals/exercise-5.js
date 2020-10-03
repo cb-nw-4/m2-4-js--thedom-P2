@@ -13,7 +13,6 @@ const addNumbers = (...nums) => {
     return undefined;
   }
   else{
-console.log(nums.length);
   return nums.reduce((previous, current) => {
     return previous + current*current;
   },0);}

@@ -5,6 +5,9 @@ const addNumbers = require("../exercise-5");
 test("Exercise 5", () => {
   expect(addNumbers(1, 2, 3, 4, 5)).toBe(55);
   // add more tests here...
+  expect(addNumbers(7, 8)).toBe(113);
+  expect(addNumbers()).toBe(undefined);
+  expect(addNumbers(5, 11, 12)).toBe(290);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

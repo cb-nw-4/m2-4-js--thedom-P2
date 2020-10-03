@@ -13,14 +13,18 @@
 
 function isPalindrome(theString) {
   // Your code here
-  let newstr=theString.split("").reverse().join("");
+  if (typeof theString !== 'string'){
+    return undefined;
+  }
+  let newstr=theString.split('').reverse().join('');
+  console.log(newstr);
+
   if(newstr===theString){
     return true;
   }
-  else if(theString!=="string"){
-    return undefined;
+  else{
+    return false;
   }
-  else{return false;}
 }
 
 // Part 2 - Test

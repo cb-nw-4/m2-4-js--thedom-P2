@@ -5,6 +5,9 @@ const isPalindrome = require("../exercise-6");
 test("Exercise 6", () => {
   expect(isPalindrome("radar")).toBe(true);
   // add more tests here...
+  expect(isPalindrome("motor")).toBe(false);
+  expect(isPalindrome("civic")).toBe(true);
+  expect(isPalindrome(56)).toBe(undefined);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
