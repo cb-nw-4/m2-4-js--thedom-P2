@@ -11,11 +11,15 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  
-  return arr.reduce((a,b) => {
-    return a + b[key];
-    }, 0);
+let sum = 0;
 
+  arr.forEach(object => {
+    if (typeof object[key] === "number") {
+    sum += object[key];
+  } else {
+    sum = undefined;
+  }});
+  return sum;
 };
 
 // Part 2 - Test

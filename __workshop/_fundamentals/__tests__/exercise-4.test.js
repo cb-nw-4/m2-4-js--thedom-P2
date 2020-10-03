@@ -39,9 +39,9 @@ test("Exercise 4", () => {
         { name: "Billy", age: 50 },
         { name: "Bob", age: 45 },
       ],
-      "age"
+      "weight"
     )
-  ).toBe(95);
+  ).toBe(undefined);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
