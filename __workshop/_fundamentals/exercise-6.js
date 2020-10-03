@@ -12,7 +12,21 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+  if (typeof(theString) !== 'string') {
+    return undefined;
+  }
+
+  let newString = '';
+
+  for (let x = theString.length; x >= 0; x--) {
+    newString += theString.charAt(x);
+  }
+
+  if (newString === theString) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Part 2 - Test
