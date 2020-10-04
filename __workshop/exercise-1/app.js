@@ -44,11 +44,11 @@ racers.forEach(function(frogElement, index) {
 });
 console.log("racers after forEach", racers);
 
-function racingFrog(racer) {
+function racingFrog(element) {
     const trackWidth = track.offsetWidth;
-    let hop = setInterval(function() {
+    let hop = setInterval(function(element) {
         const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);
-        racer.progress += hopLength;
+        element.progress += hopLength;
     });
     function stopRacing(){
         clearInterval(hop);
