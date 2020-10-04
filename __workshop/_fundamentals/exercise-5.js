@@ -9,7 +9,15 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  let sum = 0;
+  nums.map(function(num) {
+    return sum += (num * num);
+  })
+  return sum;
 };
+
+console.log(addNumbers(1, 2, 3, 4, 5)) // 55
+
 
 // Part 2 - Test
 // --------------

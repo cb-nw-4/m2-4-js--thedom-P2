@@ -7,7 +7,11 @@
 
 const convertToString = (arr) => {
   // Insert missing solution please
+  let newString = arr.map(String)
+  return newString;
 };
+
+console.log(convertToString([1,2,3,4,5]));
 
 // Part 2 - Test
 // --------------

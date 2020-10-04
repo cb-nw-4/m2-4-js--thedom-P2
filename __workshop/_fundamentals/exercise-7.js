@@ -15,8 +15,25 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
-};
+    // Insert missing solution please
+    if (typeof obj !== "object") {
+      return arr;
+    } else {
+      let newArray = arr.map(function(item) {
+        return {...item, ...obj}
+      });
+      console.log(newArray)
+    }
+  };
 
+console.log(addValues(
+  [
+    { name: "chris", age: 23 },
+    { name: "liv", age: 36 },
+    { name: "dave", age: 43 },
+  ],
+  { isAvailable: true }
+))
 // Part 2 - Test
 // --------------
 // Look for the corresponding exercise file in the __tests__ folder.

@@ -9,8 +9,18 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+  //Insert missing solution please
+  let redactedValue = arr.map(function(elem) { 
+    if (typeof elem === "string") {
+      return elem.replace(elem, "redacted")
+    } else if (typeof elem !== "string") {
+      return elem;
+    }
+});
+return redactedValue;
 };
+
+console.log(redacted(["bacon", false, 42]))
 
 // Part 2 - Test
 // --------------

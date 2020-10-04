@@ -28,7 +28,18 @@
 
 const uniqueElements = (arr1, arr2) => {
   // Your code here
-};
+  let uniqueOne = [];
+  let uniqueTwo =[];
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (uniqueOne.indexOf(arr1[i]) == -1) {
+      uniqueOne.push(arr1[i]);
+    };
+  };
+  return uniqueOne;
+  };
+
+  console.log((uniqueElements([0, 1, 2, 3], [1, 3, 4, 5])))
 
 // Part 2 - Test
 // --------------

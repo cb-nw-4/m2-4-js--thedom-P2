@@ -11,9 +11,23 @@
 // RADAR -> Yes
 // JAVASCRIPT -> No
 
-function isPalindrome(theString) {
-  // Your code here
-}
+  function isPalindrome(theString) {
+   // Your code here
+  if (typeof theString == "string") {
+  let newString = theString.toLowerCase().replace(/[^A-Z0-9]+/ig, "");
+  let newArray = newString.split("");
+  let reversedArray = newArray.reverse();
+  let finalString = reversedArray.join("");
+  if (newString == finalString) {
+    return true;
+  } else {
+    return false
+  }
+  } else if (typeof theString !== "string") {
+    return undefined
+  }
+  }
+  console.log(isPalindrome(["Madam, I'm Adam"]))
 
 // Part 2 - Test
 // --------------
