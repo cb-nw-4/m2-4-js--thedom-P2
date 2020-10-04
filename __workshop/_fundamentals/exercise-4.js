@@ -11,8 +11,16 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  let total = 0;
+  arr.forEach(person => {
+    const value = person[key];
+    if(value && typeof value === 'number'){
+      total += value;
+    }
+  })
+  return total;
 };
+console.log(count([{ name: "Bob", amount: 100 }, { name: "Josie", amount: 45 }], 'amount'));
 
 // Part 2 - Test
 // --------------

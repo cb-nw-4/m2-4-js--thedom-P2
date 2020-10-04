@@ -8,9 +8,17 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  return nums.reduce((total, currentNumber) => {
+    if(typeof currentNumber === 'number'){
+      return total + Math.pow(currentNumber,2);
+    } else if (nums.length = 0){
+      return "undefined";
+    } else if (typeof currentNumber != 'number') {
+      return total + 0;
+    }
+  },0)
 };
-
+console.log(addNumbers(11, 2, 'frog', 'soap', 31, 134, 32));
 // Part 2 - Test
 // --------------
 // Test your function.

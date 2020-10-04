@@ -10,7 +10,27 @@ test("Exercise 1", () => {
     "4",
     "5",
   ]);
-  // add more tests here...
+  expect(convertToString([44, 55, 66, 77, 88])).toStrictEqual([
+    "44",
+    "55",
+    "66",
+    "77",
+    "88"
+  ]);
+  expect(convertToString([true, false, true, false, true])).toStrictEqual([
+    "true",
+    "false",
+    "true",
+    "false",
+    "true"
+  ]);
+  expect(convertToString([4, 0, 9, 12, 15])).toStrictEqual([
+    "4",
+    "0",
+    "9",
+    "12",
+    "15"
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

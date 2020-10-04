@@ -12,9 +12,12 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+    let lowerCase = /[\W_]/g;
+    let newString = theString.toLowerCase().replace(lowerCase, '');
+    let reverseString = newString.split('').reverse().join('');
+    return reverseString === newString;
 }
-
+console.log(isPalindrome("RADAR"));
 // Part 2 - Test
 // --------------
 // Test your function.
