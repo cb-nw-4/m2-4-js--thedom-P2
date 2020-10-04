@@ -8,7 +8,13 @@ test("Exercise 9", () => {
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     )
   ).toBe(
-    "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem\nIpsum has been the industry's standard \ndummy text ever since the 1500s, when an\nunknown printer took a galley of type a\nnd scrambled it to make a type specimen \nbook."
+    "Lorem Ipsum is simply dummy text of the \n
+    printing and typesetting industry. Lorem\n
+    Ipsum has been the industry's standard \n
+    dummy text ever since the 1500s, when an\n
+    unknown printer took a galley of type a\n
+    nd scrambled it to make a type specimen \n
+    book."
   );
   // add more tests here...
 });

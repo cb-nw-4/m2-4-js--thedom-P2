@@ -47,6 +47,7 @@ main {
   padding: 0 10px;
 }
 .frog {
+  background-image: url("frogx50.png");
   border-radius: 50%;
   color: #fff;
   font-weight: 700;

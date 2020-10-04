@@ -12,7 +12,16 @@
 
 const count = (arr, key) => {
   // Insert missing solution please
-};
+  let sum = 0;
+  arr.forEach(function(item) {
+    if (typeof item[key] === "number") {
+      sum += item[key];
+    }
+})
+return sum;
+}
+
+console.log(count([{ name: "Bob", amount: 100 }, { name: "Josie", amount: 45 },], "amount"));
 
 // Part 2 - Test
 // --------------
