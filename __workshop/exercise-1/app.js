@@ -29,7 +29,7 @@ for (let f = 0; f < FROGS; f++) {
   racers.push(frogstable[f]);
 }
 // console.log racers
-//console.log(racers);
+console.log(racers);
 
 //exercise 1.3 & exercise 4 & 
 racers.forEach(function (racer, i) {
@@ -49,7 +49,7 @@ racers.forEach(function (racer, i) {
   racer.lane = "lane-" + laneNum;
 });
 //verify
-//console.log(racers);
+console.log(racers);
 
 //exercise 1.6
 
