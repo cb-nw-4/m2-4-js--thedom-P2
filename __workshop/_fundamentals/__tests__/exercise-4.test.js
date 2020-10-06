@@ -13,6 +13,35 @@ test("Exercise 4", () => {
     )
   ).toBe(145);
   // add more tests here...
+  expect(
+    count(
+      [
+        { item: "apple", price: 2 },
+        { item: "banana", price: 10 },
+        { item: "orange", price: 2 },
+      ],
+      "price"
+    )
+  ).toBe(14);
+  expect(
+    count(
+      [
+        { charge: "bill", amount: 50 },
+        { charge: "refund", amount: -25 },
+        { charge: "bill", amount: 25 },
+      ],
+      "amount"
+    )
+  ).toBe(50);
+  expect(
+    count(
+      [
+        { name: "Billy", age: 50 },
+        { name: "Bob", age: 45 },
+      ],
+      "weight"
+    )
+  ).toBe(undefined);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

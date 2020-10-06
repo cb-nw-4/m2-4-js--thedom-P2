@@ -15,7 +15,13 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
+   
+   if (typeof obj !== "object") {
+      return arr;
+   }
+
+   return arr.map(pair => (Object.assign(pair, obj)));
+
 };
 
 // Part 2 - Test

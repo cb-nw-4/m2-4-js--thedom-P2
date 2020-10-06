@@ -6,7 +6,9 @@
 //
 
 const convertToString = (arr) => {
-  // Insert missing solution please
+
+  return arr.map(String);
+  
 };
 
 // Part 2 - Test

@@ -8,8 +8,14 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
-};
+
+  if (nums.length === 0) {
+    return undefined;
+  } 
+   let arrN = nums.filter(num => typeof num === "number");
+    return arrN.reduce((a,b) => a + (b * b), 0);
+}
+
 
 // Part 2 - Test
 // --------------
