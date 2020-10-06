@@ -15,8 +15,13 @@
 // - If the second parameter is not an object, return the original array element
 
 const insert = (arr, obj) => {
-  // Insert missing solution please
-};
+  if (typeof obj != 'object'){
+    return arr, obj;
+  } else{
+    return arr.map(element => Object.assign(element, obj));
+  }
+}
+console.log(insert([{ name: "Bob" }, { name: "Josie" }], {"isAvailable": false}));
 
 // Part 2 - Test
 // --------------

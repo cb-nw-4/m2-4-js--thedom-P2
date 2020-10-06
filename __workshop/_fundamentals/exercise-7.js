@@ -14,8 +14,13 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const addValues = (arr, obj) => {
-  // Insert missing solution please
+  if (typeof obj != 'object'){
+    return 'null';
+  } else{
+    return arr.map(element => Object.assign(element, obj));
+  }
 };
+console.log(addValues(([{name: 'chris', age: 23}, {name: 'liv', age: 36}, {name: 'dave', age: 43}], {isAvailable: true})));
 
 // Part 2 - Test
 // --------------

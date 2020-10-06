@@ -27,8 +27,11 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  let newArray = arr1.concat(arr2);
+    return newArray.filter(item => !arr1.includes(item) || !arr2.includes(item));
 };
+
+console.log(uniqueElements([0,1,2,3], [1,3,4,5]));
 
 // Part 2 - Test
 // --------------
