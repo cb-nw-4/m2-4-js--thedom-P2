@@ -8,7 +8,19 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  let sum = 0;
+
+  if (nums.length === 0) {
+    return undefined;
+  }
+
+  nums.forEach(num => {
+    if (typeof(num) === 'number') {
+      sum += num * num;
+    }
+  });
+
+  return sum;
 };
 
 // Part 2 - Test

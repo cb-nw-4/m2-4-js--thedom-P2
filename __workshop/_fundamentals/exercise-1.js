@@ -6,7 +6,7 @@
 //
 
 const convertToString = (arr) => {
-  // Insert missing solution please
+  return arr.map(i => `${i}`);
 };
 
 // Part 2 - Test
