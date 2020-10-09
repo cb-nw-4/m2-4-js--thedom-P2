@@ -9,6 +9,18 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  let sum = 0
+nums.forEach(element =>{
+  sum += element
+
+})
+return sum
+  
+
+
+  //loop over an array, sqaure all numbers
+// add all the numbers toghther
+
 };
 
 // Part 2 - Test

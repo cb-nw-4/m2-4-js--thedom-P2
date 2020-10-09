@@ -8,8 +8,29 @@
 // e.g. redacted(["bacon", false, 42]) returns [ 'redacted', false, 42 ]
 //
 
+// [1,3,4].map(function(item){
+//   return item * 2
+// });
+// [1,3,4].map((item)=>{
+//   return item * 2
+// });
+// [1,3,4].map((item)=> item * 2);
+
 const redacted = (arr) => {
   // Insert missing solution please
+// type of string 
+// map or for each  - map is for different value 
+
+// How do I set this up 
+
+  return arr.map((item)=>{
+    if (typeof item === 'string'){
+      return 'redacted'
+    }
+    return item
+  })
+
+
 };
 
 // Part 2 - Test

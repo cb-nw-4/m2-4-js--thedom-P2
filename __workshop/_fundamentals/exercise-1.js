@@ -6,6 +6,9 @@
 //
 
 const convertToString = (arr) => {
+  let string = arr.toString();
+  let answer = string.split(",")
+  return answer
   // Insert missing solution please
 };
 

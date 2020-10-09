@@ -16,6 +16,20 @@
 
 const insert = (arr, obj) => {
   // Insert missing solution please
+  
+
+  const variable = arr.map(item =>{
+    if (typeof obj === 'object'){
+      return {...item,...obj}
+
+    }else
+    return item
+  })
+
+  return variable  
+
+
+
 };
 
 // Part 2 - Test
