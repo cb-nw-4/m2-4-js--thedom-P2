@@ -11,8 +11,15 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
-};
+  
+  let result = 0
+  arr.forEach((element) => {
+    result = result + element[key]
+    }
+)
+  return result
+}
+
 
 // Part 2 - Test
 // --------------

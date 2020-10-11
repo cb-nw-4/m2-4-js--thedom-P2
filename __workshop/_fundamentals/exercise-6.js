@@ -12,8 +12,22 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
-}
+  if (typeof theString !== "string"){
+    return undefined
+  }
+  let palindrome = theString.split("").reverse().join("")
+    if (theString !== palindrome){
+      return false
+    }
+    else {
+      return true
+    }
+  }
+  
+    
+
+    
+
 
 // Part 2 - Test
 // --------------
