@@ -13,6 +13,13 @@
 //https://www.google.com/search?q=check+if+string+is+a+palindrome+javascript&oq=check+if+string+is+a+palindrome+javascript&aqs=chrome..69i57j0l2.7660j0j4&sourceid=chrome&ie=UTF-8
 function isPalindrome(theString) {
   // Your code here
+  let palin = theString.split("").reverse().join("");
+
+    if (palin === theString){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Part 2 - Test

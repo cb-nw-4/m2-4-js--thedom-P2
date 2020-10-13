@@ -12,14 +12,8 @@ const wrapAfter40Chars = (paragraph) => {
   // Your code here
   //define length var length = 7;
 // string length < defined lenth 
-
-// string methods 
-let answer = paragraph.split("")
-const length = 40
-for (i=0; ){
-
-}
-console.log(answer)
+let answer = paragraph.replace(/.{40}/g, `$&\n`)
+return answer 
 };
 
 // Part 2 - Test

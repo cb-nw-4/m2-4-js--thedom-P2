@@ -11,7 +11,8 @@ const addNumbers = (...nums) => {
   // Insert missing solution please
   let sum = 0
 nums.forEach(element =>{
-  sum += element
+  let variable = Math.pow(element,2)
+  sum = variable + sum
 
 })
 return sum
