@@ -8,7 +8,13 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  if (nums.length == 0) {
+    return undefined;
+  }
+  return nums.reduce(function (total, element) {
+      let square = (element * element);
+      return total + square;
+  });
 };
 
 // Part 2 - Test

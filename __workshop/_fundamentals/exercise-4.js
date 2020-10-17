@@ -11,8 +11,32 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
-};
+  return arr.reduce(function (total, element) {
+    return total + element[key];
+  }, 0);
+}
+
+
+// const count = (arr, key) => {
+//   let total = 0;
+  
+//   arr.forEach(function (element) {
+//     total += element[key];
+//   });
+
+//   return total;
+// }
+
+
+// const count = (arr, key) => {
+//   let total = 0;
+//   for (i = 0; i < arr.length; i++) {
+//     let element = arr[i];
+//     total += element[key];
+//   }
+//   return total;
+// }
+
 
 // Part 2 - Test
 // --------------

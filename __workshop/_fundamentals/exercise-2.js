@@ -9,8 +9,16 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
-};
+  let allElements = arr.map(function (element) {
+    if (typeof element === "string") {
+      let result = "redacted";
+      return result;
+    } else {
+      return element;
+    }
+  });
+  return allElements;
+}
 
 // Part 2 - Test
 // --------------
