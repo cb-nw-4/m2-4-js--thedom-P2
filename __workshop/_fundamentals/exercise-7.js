@@ -15,6 +15,14 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+  return arr.map(function(element,i){
+    // let newAnswer = arr[i].push(obj)
+    // let answer = arr[i].push[obj]
+    return Object.assign(arr[i],obj)
+     
+
+  })
+
 };
 
 // Part 2 - Test
