@@ -42,32 +42,33 @@ racers.forEach((element,i) => {
     document.getElementById("lane-"+laneNum).appendChild(frogName);
     frogName.innerText = (element.name);
     // frog progress 0 + frog lane 
+    element.node = frog;
     element.progress = 0;
     element.lane = "lane-"+laneNum;
 });
 
-function racingFrog(racer) {
-    console.log("racingFrog() ", racer);
+function racingFrog(racer, i)  {
+    console.log("racingFrog() ", racer,);
     // Calculate the hop distance
     const trackWidth = track.offsetWidth;
-const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);
+
 const hop = setInterval(function () {
     const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);
     // add hopLength to progress
     racer.progress += hopLength;
     // add a console log to verify
     console.log(racer.name +" is at " + racer.progress);
-    let i = indexOf(racer)+1;
-    let frogPosition = racer.progress + "%";
-    document.getElementById("frog-"+i).style.left = frogPosition;
-    if (racer.progress >= 100){
+
+    let frogPosition = racer.progress >= 100 ? 100 : racer.progress;
+    racer.node.style.left = frogPosition + '%';
+    if (frogPosition >= 100){
         clearInterval(hop);
         console.log(racer.name + " Win!")
     }
 }, 1000);
 
 };
-racers.forEach ((element)=> { 
-    racingFrog(element);
+racers.forEach ((element, i)=> { 
+    racingFrog(element, i);
 }); 
 
