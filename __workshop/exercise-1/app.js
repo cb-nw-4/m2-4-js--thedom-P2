@@ -1,4 +1,3 @@
-// Preset values
 const FROGS = 3;
 
 for (let count = 1; count <= FROGS; count++) {
@@ -32,25 +31,25 @@ racers.forEach (function (racer, i) {
     frogName.innerText = racer.name;
     racer.progress = 0;
     racer.lane = 'lane-' + laneNumber;
-    // 
 });
 
 function racingFrog(racer) {
     console.log("racingFrog() ", racer);
+
+    let randomDelay = Math.floor(Math.random() * 2000);
  
     let hop = setInterval(function () {
         const trackWidth = track.offsetWidth;
         const hopLength = Math.floor(((Math.random() * 100) / trackWidth) * 100);
         racer.progress += hopLength;
         console.log(racer.name + ' is at ' + racer.progress);
-        Math.floor(Math.random() * 1000)
         racer.frog.style.left = `${racer.progress}%`;
         
         if (racer.progress >= 100) {
             clearInterval(hop);
             console.log(racer.name + ' has reached 100!');
         }
-    }, 1000)
+    }, randomDelay)
 }
 
 racers.forEach(function (racer) {
